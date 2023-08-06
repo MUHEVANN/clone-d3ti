@@ -239,7 +239,7 @@ const Navbar = () => {
                       <li className="p-2 hover:bg-[#f59e0b] hover:rounded">
                         <Menu className="relative" as="div">
                           <Menu.Button className="flex items-center gap-x-2 text-[12px]">
-                            Program <BsChevronDown />
+                            Akademik <BsChevronDown />
                           </Menu.Button>
                           <Transition
                             enter="transition-opacity duration-300"
@@ -249,8 +249,8 @@ const Navbar = () => {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                           >
-                            <Menu.Items className="absolute z-50 flex flex-col bg-[#f59e0b] rounded text-white w-auto max-w-[300px] h-auto p-2 shadow-lg">
-                              {ProgramLinks.map((item) => {
+                            <Menu.Items className="absolute flex flex-col bg-[#f59e0b] rounded text-white w-auto max-w-[300px] h-auto p-2 shadow-lg">
+                              {AkademikLinks.map((item) => {
                                 return (
                                   <Menu.Item>
                                     {({ active }) => (

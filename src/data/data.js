@@ -60,32 +60,7 @@ export const AkademikLinks = [
     label: "Krs ",
   },
 ];
-export const ProgramLinks = [
-  {
-    link: "/program/daftar-instansi-magang",
-    label: "Daftar Instansi Magang",
-  },
-  {
-    link: "/program/magang-reguler",
-    label: "Magang Reguler",
-  },
-  {
-    link: "/program/magang-mbkm",
-    label: "Magang MBKM",
-  },
-  {
-    link: "/program/ta-non-reguler",
-    label: "TA Non Reguler",
-  },
-  {
-    link: "/program/ta-reguler",
-    label: "TA Reguler",
-  },
-  {
-    link: "/program/alur-proses-magang",
-    label: "Alur Proses Magang ",
-  },
-];
+
 export const Departments = [
   {
     label: "Direktorat Administrasi Akademik (DAAK)",
