@@ -167,7 +167,40 @@ const Navbar = () => {
                           Beranda
                         </Link>
                       </li>
-
+                      <li className="p-2 hover:bg-[#f59e0b] hover:rounded">
+                        <Menu className="relative" as="div">
+                          <Menu.Button className="flex items-center gap-x-2 text-[12px]">
+                            Profile <BsChevronDown />
+                          </Menu.Button>
+                          <Transition
+                            enter="transition-opacity duration-300"
+                            enterFrom="opacity-0"
+                            enterTo="opacity-100"
+                            leave="transition-opacity duration-150"
+                            leaveFrom="opacity-100"
+                            leaveTo="opacity-0"
+                          >
+                            <Menu.Items className="absolute flex flex-col bg-[#f59e0b] rounded text-white w-auto max-w-[300px] h-auto p-2 shadow-lg">
+                              {ProfileLinks.map((item) => {
+                                return (
+                                  <Menu.Item>
+                                    {({ active }) => (
+                                      <a
+                                        className={`p-2 rounded whitespace-nowrap text-[12px]  ${
+                                          active && "bg-white text-[#f59e0b]"
+                                        }`}
+                                        href={item.link}
+                                      >
+                                        {item.label}
+                                      </a>
+                                    )}
+                                  </Menu.Item>
+                                );
+                              })}
+                            </Menu.Items>
+                          </Transition>
+                        </Menu>
+                      </li>
                       <li className="p-2 hover:bg-[#f59e0b] hover:rounded">
                         <Menu className="relative" as="div">
                           <Menu.Button className="flex items-center gap-x-2 text-[12px]">
@@ -202,40 +235,7 @@ const Navbar = () => {
                           </Transition>
                         </Menu>
                       </li>
-                      <li className="p-2 hover:bg-[#f59e0b] hover:rounded">
-                        <Menu className="relative" as="div">
-                          <Menu.Button className="flex items-center gap-x-2 text-[12px]">
-                            Akademik <BsChevronDown />
-                          </Menu.Button>
-                          <Transition
-                            enter="transition-opacity duration-75 z-50"
-                            enterFrom="opacity-0"
-                            enterTo="opacity-100"
-                            leave="transition-opacity duration-150"
-                            leaveFrom="opacity-100"
-                            leaveTo="opacity-0"
-                          >
-                            <Menu.Items className="absolute z-50  flex flex-col bg-[#f59e0b] rounded text-white w-auto max-w-[300px] h-auto p-2 shadow-lg">
-                              {AkademikLinks.map((item) => {
-                                return (
-                                  <Menu.Item>
-                                    {({ active }) => (
-                                      <a
-                                        className={`p-2 rounded whitespace-nowrap text-[12px] ${
-                                          active && "bg-white text-[#f59e0b]"
-                                        }`}
-                                        href={item.link}
-                                      >
-                                        {item.label}
-                                      </a>
-                                    )}
-                                  </Menu.Item>
-                                );
-                              })}
-                            </Menu.Items>
-                          </Transition>
-                        </Menu>
-                      </li>
+
                       <li className="p-2 hover:bg-[#f59e0b] hover:rounded">
                         <Menu className="relative" as="div">
                           <Menu.Button className="flex items-center gap-x-2 text-[12px]">
